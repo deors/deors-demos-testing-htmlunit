@@ -31,10 +31,10 @@
         <derby.version>10.8.2.2</derby.version>
         <slf4j.version>1.6.4</slf4j.version>
 
-        <junit.version>4.10</junit.version>
-        <jacoco.version>0.6.3.201306030806</jacoco.version>
-        <easymock.version>3.1</easymock.version>
-        <htmlunit.version>2.12</htmlunit.version>
+        <junit.version>4.11</junit.version>
+        <jacoco.version>0.7.0.201403182114</jacoco.version>
+        <easymock.version>3.2</easymock.version>
+        <htmlunit.version>2.13</htmlunit.version>
 
         <tomcat.version>7.0.42</tomcat.version>
     </properties>
@@ -47,8 +47,6 @@
                 <version>3.1</version>
                 <configuration>
                     <verbose>true</verbose>
-                    <fork>true</fork>
-                    <executable>${java.home}/../bin/javac</executable>
                     <compilerVersion>${java.version}</compilerVersion>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
