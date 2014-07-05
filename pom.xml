@@ -38,6 +38,8 @@
         <jacoco.utAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.utReport}</jacoco.utAgentConfig>
         <jacoco.itAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.itReport}</jacoco.itAgentConfig>
 
+        <jacoco-listeners.version>2.3</jacoco-listeners.version>
+
         <sonar.jacoco.itReportPath>${jacoco.itReport}</sonar.jacoco.itReportPath>
 
         <tomcat.version>7.0.42</tomcat.version>
@@ -64,6 +66,12 @@
                     <excludes>
                         <exclude>**/it/*TestCase.java</exclude>
                     </excludes>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>org.sonar.java.jacoco.JUnitListener</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
             <plugin>
@@ -249,6 +257,12 @@
             <artifactId>org.jacoco.agent</artifactId>
             <version>${jacoco.version}</version>
             <classifier>runtime</classifier>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.sonar-plugins.java</groupId>
+            <artifactId>sonar-jacoco-listeners</artifactId>
+            <version>${jacoco-listeners.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
