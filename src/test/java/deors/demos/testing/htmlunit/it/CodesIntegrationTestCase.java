@@ -207,8 +207,9 @@ public class CodesIntegrationTestCase {
 
         assertEquals("Codes View Page", viewPage.getTitleText());
 
+        // check for error returned
         String viewText = viewPage.asText();
-        System.out.println(viewText);
+
         assertTrue(viewText.contains("ERROR adding new records to Codes table"));
         assertTrue(viewText.contains("could not insert"));
         assertTrue(viewText.contains("entities.CodesImpl"));
