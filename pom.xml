@@ -40,8 +40,8 @@
 
         <jacoco-listeners.version>3.5</jacoco-listeners.version>
 
-        <tomcat.version>7.0.61</tomcat.version>
-        <tomcat.downloadUrl>http://archive.apache.org/dist/tomcat/tomcat-7/v${tomcat.version}/bin/apache-tomcat-${tomcat.version}.zip</tomcat.downloadUrl>
+        <tomcat.version>8.0.29</tomcat.version>
+        <tomcat.downloadUrl>http://archive.apache.org/dist/tomcat/tomcat-8/v${tomcat.version}/bin/apache-tomcat-${tomcat.version}.zip</tomcat.downloadUrl>
     </properties>
 
     <build>
@@ -94,18 +94,19 @@
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>1.4.16</version>
                 <configuration>
                     <container>
-                        <containerId>tomcat7x</containerId>
+                        <containerId>tomcat8x</containerId>
                         <zipUrlInstaller>
                             <url>${tomcat.downloadUrl}</url>
                         </zipUrlInstaller>
                     </container>
                     <configuration>
                         <properties>
-                            <cargo.servlet.port>8180</cargo.servlet.port>
-                            <cargo.tomcat.ajp.port>8109</cargo.tomcat.ajp.port>
+                            <cargo.servlet.port>56080</cargo.servlet.port>
+                            <cargo.tomcat.ajp.port>56009</cargo.tomcat.ajp.port>
+                            <cargo.rmi.port>56205</cargo.rmi.port>
                             <cargo.jvmargs>${jacoco.itAgentConfig}</cargo.jvmargs>
                         </properties>
                     </configuration>
