@@ -172,7 +172,7 @@ public class CodesIntegrationTestCase {
         assertTrue(codes.contains("C"));
         assertTrue(codes.contains("D"));
 
-        client.closeAllWindows();
+        client.close();
     }
 
     @SuppressWarnings("unchecked")
@@ -214,6 +214,6 @@ public class CodesIntegrationTestCase {
         assertTrue(viewText.contains("could not insert"));
         assertTrue(viewText.contains("entities.CodesImpl"));
 
-        client.closeAllWindows();
+        client.close();
     }
 }
