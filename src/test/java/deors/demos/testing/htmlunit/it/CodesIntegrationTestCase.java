@@ -32,7 +32,7 @@ public class CodesIntegrationTestCase {
         TARGET_SERVER_URL = getConfigurationProperty(
             "TARGET_SERVER_URL",
             "test.target.server.url",
-            "http://localhost:56080/deors.demos.testing.htmlunit");
+            "http://localhost:56080/deors-demos-testing-htmlunit");
 
         logger.info("using target server at: " + TARGET_SERVER_URL);
     }

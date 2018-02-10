@@ -5,11 +5,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>deors.demos.testing.htmlunit</name>
     <groupId>deors.demos</groupId>
-    <artifactId>deors.demos.testing.htmlunit</artifactId>
+    <artifactId>deors-demos-testing-htmlunit</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+
+    <name>deors-demos-testing-htmlunit</name>
+    <description>Demonstration of Java UI integration tests with HtmlUnit on top of JUnit</description>
 
     <properties>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
