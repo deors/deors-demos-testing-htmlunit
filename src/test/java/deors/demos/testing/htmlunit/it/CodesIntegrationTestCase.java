@@ -175,7 +175,6 @@ public class CodesIntegrationTestCase {
         client.close();
     }
 
-    @SuppressWarnings("unchecked")
     @Test
     public void testCodesError500DuplicateKey()
         throws MalformedURLException, IOException {
