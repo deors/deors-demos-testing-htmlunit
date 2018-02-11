@@ -275,10 +275,10 @@
                     <plugin>
                         <groupId>org.codehaus.cargo</groupId>
                         <artifactId>cargo-maven2-plugin</artifactId>
-                        <version>1.2.1</version>
+                        <version>1.4.16</version>
                         <configuration>
                             <container>
-                                <containerId>tomcat7x</containerId>
+                                <containerId>tomcat8x</containerId>
                                 <type>remote</type>
                             </container>
                             <configuration>
@@ -306,16 +306,16 @@
             </build>
         </profile>
         <profile>
-            <id>jboss</id>
+            <id>wildfly</id>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>org.codehaus.cargo</groupId>
                         <artifactId>cargo-maven2-plugin</artifactId>
-                        <version>1.2.1</version>
+                        <version>1.4.16</version>
                         <configuration>
                             <container>
-                                <containerId>jboss7x</containerId>
+                                <containerId>wildfly8x</containerId>
                                 <type>remote</type>
                             </container>
                             <configuration>
@@ -340,9 +340,9 @@
                         </configuration>
                         <dependencies>
                             <dependency>
-                                <groupId>org.jboss.as</groupId>
-                                <artifactId>jboss-as-controller-client</artifactId>
-                                <version>7.1.1.Final</version>
+                                <groupId>org.wildfly</groupId>
+                                <artifactId>wildfly-controller-client</artifactId>
+                                <version>8.2.1.Final</version>
                             </dependency>
                         </dependencies>
                     </plugin>
@@ -356,10 +356,10 @@
                     <plugin>
                         <groupId>org.codehaus.cargo</groupId>
                         <artifactId>cargo-maven2-plugin</artifactId>
-                        <version>1.2.1</version>
+                        <version>1.4.16</version>
                         <configuration>
                             <container>
-                                <containerId>glassfish3x</containerId>
+                                <containerId>glassfish4x</containerId>
                                 <type>remote</type>
                             </container>
                             <configuration>
@@ -384,9 +384,9 @@
                         </configuration>
                         <dependencies>
                             <dependency>
-                                <groupId>org.glassfish.deployment</groupId>
-                                <artifactId>deployment-client</artifactId>
-                                <version>3.1.1</version>
+                                <groupId>org.glassfish.main.deployment</groupId>
+                                <artifactId>deployment</artifactId>
+                                <version>4.1.1</version>
                             </dependency>
                         </dependencies>
                     </plugin>
