@@ -31,7 +31,7 @@
 
         <junit.version>4.12</junit.version>
         <easymock.version>3.4</easymock.version>
-        <htmlunit.version>2.23</htmlunit.version>
+        <htmlunit.version>2.29</htmlunit.version>
 
         <jacoco.version>0.8.0</jacoco.version>
         <jacoco.path>${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar</jacoco.path>

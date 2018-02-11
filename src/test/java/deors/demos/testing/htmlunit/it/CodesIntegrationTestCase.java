@@ -64,10 +64,10 @@ public class CodesIntegrationTestCase {
         assertEquals("Codes View Page", viewPage.getTitleText());
 
         // confirm initial data list
-        List<DomAttr> codeAttrNodes = (List<DomAttr>) viewPage.getByXPath("//input[@name='code']/@value");
+        List<Object> codeAttrNodes = viewPage.getByXPath("//input[@name='code']/@value");
         List<String> codes = new ArrayList<String>();
-        for (DomAttr attr : codeAttrNodes) {
-            codes.add(attr.getTextContent());
+        for (Object attr : codeAttrNodes) {
+            codes.add(((DomAttr) attr).getTextContent());
         }
 
         assertEquals(3, codes.size());
@@ -98,19 +98,19 @@ public class CodesIntegrationTestCase {
         assertEquals("Codes View Page", viewPage.getTitleText());
 
         // confirm the new record has been added
-        codeAttrNodes = (List<DomAttr>) viewPage.getByXPath("//input[@name='code']/@value");
+        codeAttrNodes = viewPage.getByXPath("//input[@name='code']/@value");
         codes = new ArrayList<String>();
-        for (DomAttr attr : codeAttrNodes) {
-            codes.add(attr.getTextContent());
+        for (Object attr : codeAttrNodes) {
+            codes.add(((DomAttr) attr).getTextContent());
         }
 
         assertEquals(4, codes.size());
         assertTrue(codes.contains("P"));
 
-        List<DomAttr> valueAttrNodes = (List<DomAttr>) viewPage.getByXPath("//input[@name='value']/@value");
+        List<Object> valueAttrNodes = viewPage.getByXPath("//input[@name='value']/@value");
         List<String> values = new ArrayList<String>();
-        for (DomAttr attr : valueAttrNodes) {
-            values.add(attr.getTextContent());
+        for (Object attr : valueAttrNodes) {
+            values.add(((DomAttr) attr).getTextContent());
         }
 
         assertTrue(values.contains("postponed"));
@@ -136,10 +136,10 @@ public class CodesIntegrationTestCase {
         assertEquals("Codes View Page", viewPage.getTitleText());
 
         // confirm the record has been updated
-        valueAttrNodes = (List<DomAttr>) viewPage.getByXPath("//input[@name='value']/@value");
+        valueAttrNodes = viewPage.getByXPath("//input[@name='value']/@value");
         values = new ArrayList<String>();
-        for (DomAttr attr : valueAttrNodes) {
-            values.add(attr.getTextContent());
+        for (Object attr : valueAttrNodes) {
+            values.add(((DomAttr) attr).getTextContent());
         }
 
         assertTrue(values.contains("updated value"));
@@ -161,10 +161,10 @@ public class CodesIntegrationTestCase {
         assertEquals("Codes View Page", viewPage.getTitleText());
 
         // confirm final data list
-        codeAttrNodes = (List<DomAttr>) viewPage.getByXPath("//input[@name='code']/@value");
+        codeAttrNodes = viewPage.getByXPath("//input[@name='code']/@value");
         codes = new ArrayList<String>();
-        for (DomAttr attr : codeAttrNodes) {
-            codes.add(attr.getTextContent());
+        for (Object attr : codeAttrNodes) {
+            codes.add(((DomAttr) attr).getTextContent());
         }
 
         assertEquals(3, codes.size());
