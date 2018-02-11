@@ -51,7 +51,6 @@ public class CodesIntegrationTestCase {
         return retValue;
     }
 
-    @SuppressWarnings("unchecked")
     @Test
     public void testCodesCrud()
         throws MalformedURLException, IOException {
